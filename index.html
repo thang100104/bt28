@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Layout với RWD</title>
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Phim Hoạt Hình</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="header">
-  <div class="logo">Logo</div>
-  <div class="menu">
-    <a href="#">Home</a><a href="#">About</a><a href="#">Projects</a><a href="#">Contact</a>
-  </div>
-  <div class="login">↪ Login</div>
-</div>
+<div class="header"><div class="logo">Phim <span>Hoạt Hình</span></div><div class="search"><input type="text" placeholder="Tìm kiếm phim..."><button>Tìm</button></div></div>
+<div class="head-link"><a class="active" href="#">Phim hoạt hình</a><a href="#">Phim yêu thích</a><a href="#">Nhân vật hoạt hình</a><a href="#">Góp ý</a></div>
 
-<div class="row">
-  <div class="col-left">
-    <a href="#">Link</a><a href="#">Link</a><a href="#">Link</a>
-  </div>
-
-  <div class="col-main">
-    <div class="welcome">
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in porta lorem. Morbi condimentum est nibh, et consectetur tortor feugiat at.</p>
+<div class="content">
+  <div class="left-content">
+    <div class="video-item active-item" onclick="changeVideo('https://www.youtube.com/embed/aqz-KE-bpKQ','Welcome to Cartoon World')">
+      <div class="thumb">▶</div><div><b>Welcome to Cartoon World</b><p>5,147,528 lượt xem</p></div>
     </div>
-    <hr>
-    <div class="test">
-      <h2>Test</h2>
-      <p>Lorem ipsum...</p>
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/ScMzIvxBSi4','Hoạt hình vui nhộn')">
+      <div class="thumb second">▶</div><div><b>Hoạt hình vui nhộn</b><p>1,200,000 lượt xem</p></div>
+    </div>
+    <div class="video-item" onclick="changeVideo('https://www.youtube.com/embed/M7lc1UVf-VE','Video hoạt hình HD')">
+      <div class="thumb third">▶</div><div><b>Video hoạt hình HD</b><p>980,000 lượt xem</p></div>
+    </div>
+    <div class="video-item" onclick="showLocalVideo()">
+      <div class="thumb fourth">▶</div><div><b>Video HTML5</b><p>Video sử dụng thẻ &lt;video&gt;</p></div>
     </div>
   </div>
 
-  <div class="col-right">
-    <div class="ads">ADS</div>
-    <div class="ads">ADS</div>
+  <div class="right-content">
+    <div id="youtubeBox" class="player"><iframe id="mainVideo" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="Video hoạt hình" allowfullscreen></iframe></div>
+    <div id="localBox" class="player hidden"><video controls><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">Trình duyệt không hỗ trợ video.</video></div>
+    <h2 id="videoTitle">Welcome to Cartoon World</h2>
+    <p class="views">5,147,528 lượt xem</p>
+    <p>Website tổng hợp các nội dung hoạt hình phù hợp, giao diện đơn giản và dễ sử dụng. Người xem có thể chọn video ở danh sách bên trái để phát ở khu vực nội dung chính.</p>
   </div>
 </div>
 
-<div class="footer">Footer Text</div>
-</body>
-</html>
+<div class="footer">© 2026 - Thiết kế web hoạt hình trực tuyến</div>
+<script>
+function changeVideo(src,title){
+ document.getElementById('youtubeBox').classList.remove('hidden');
+ document.getElementById('localBox').classList.add('hidden');
+ document.getElementById('mainVideo').src=src;
+ document.getElementById('videoTitle').textContent=title;
+}
+function showLocalVideo(){
+ document.getElementById('youtubeBox').classList.add('hidden');
+ document.getElementById('localBox').classList.remove('hidden');
+ document.getElementById('videoTitle').textContent='Video HTML5';
+}
+</script>
+</body></html>
