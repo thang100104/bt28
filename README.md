@@ -1,15 +1,16 @@
-# Thực hành: Tạo trang web để đăng nhập và hiển thị lời chào
+# Thực hành: Ứng dụng chuyển đổi tiền tệ - Servlet
 
-Dự án Maven Java JSP/Servlet cho Tomcat 10.1+.
+Ứng dụng Java JSP/Servlet chuyển đổi USD sang VNĐ.
 
-## Tài khoản kiểm thử
-- Username: `admin`
-- Password: `admin`
-
-Đúng tài khoản hiển thị: **Welcome admin to website**. Sai hiển thị: **Login Error**.
+## Chức năng
+- Nhập tỉ giá VND/USD.
+- Nhập lượng USD.
+- Gửi form bằng POST tới `/convert`.
+- Servlet tính: `VND = USD * Rate`.
+- Hiển thị kết quả và xử lý dữ liệu không hợp lệ.
 
 ## Chạy
-1. Cài JDK 17, Maven và Tomcat 10.1+.
+1. Yêu cầu JDK 17, Maven và Tomcat 10.1+.
 2. Chạy `mvn clean package`.
-3. Deploy `target/jsp-servlet-login.war` vào Tomcat.
-4. Truy cập `http://localhost:8080/jsp-servlet-login/`.
+3. Deploy `target/jsp-servlet-currency-converter.war` lên Tomcat.
+4. Mở `http://localhost:8080/jsp-servlet-currency-converter/`.
