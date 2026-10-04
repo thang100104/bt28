@@ -1,1 +1,24 @@
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f0f2f5;color:#1c1e21}.header{position:fixed;top:0;left:0;right:0;height:60px;background:#fff;display:flex;align-items:center;padding:0 18px;box-shadow:0 2px 5px rgba(0,0,0,.12);z-index:1000}.logo{font-size:27px;font-weight:bold;color:#1877f2;margin-right:20px}.search{width:260px;border:0;background:#f0f2f5;padding:11px 16px;border-radius:22px;outline:none}.top-nav{margin-left:auto;display:flex;gap:8px}.top-nav a,.sidebar a{text-decoration:none;color:#333}.top-nav a{padding:10px 12px;border-radius:8px}.top-nav a:hover,.sidebar a:hover{background:#f0f2f5}.layout{display:grid;grid-template-columns:240px minmax(360px,680px) 240px;justify-content:space-between;gap:25px;padding:80px 25px 25px}.sidebar{position:sticky;top:80px;height:calc(100vh - 100px);background:#fff;padding:18px;border-radius:10px}.sidebar h3{margin-top:0}.left-sidebar a{display:block;padding:12px 8px;border-radius:8px;margin-bottom:4px}.content{width:100%}.create-post,.post{background:#fff;border-radius:10px;padding:15px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.1)}.create-post{display:flex;gap:10px}.create-post input{flex:1;border:0;background:#f0f2f5;border-radius:22px;padding:0 16px;outline:none}.avatar{width:42px;height:42px;min-width:42px;border-radius:50%;background:#1877f2;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold}.post-header{display:flex;gap:10px;align-items:center}.post-header small{display:block;color:#65676b;margin-top:3px}.post p{line-height:1.5}.post-image{height:260px;background:#dfe3e8;display:flex;align-items:center;justify-content:center;font-size:24px;color:#65676b;margin:12px -15px}.actions{display:flex;border-top:1px solid #ddd;padding-top:8px}.actions button{flex:1;border:0;background:#fff;padding:10px;cursor:pointer;font-weight:bold;color:#65676b}.actions button:hover{background:#f0f2f5}.contact{padding:10px 4px}.contact span{display:inline-block;width:9px;height:9px;border-radius:50%;background:#31a24c;margin-right:8px}@media(max-width:900px){.right-sidebar{display:none}.layout{grid-template-columns:200px minmax(0,1fr)}}@media(max-width:650px){.left-sidebar,.top-nav{display:none}.layout{display:block;padding:75px 10px 15px}.search{width:55%}.logo{font-size:22px}}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222}.header{height:55px;background:#222;color:#fff;display:flex;align-items:center}.logo{font-size:20px;padding:0 22px}.menu{display:flex;height:100%}.menu a{color:#bbb;text-decoration:none;padding:18px 16px}.menu a:first-child,.menu a:hover{background:#080808;color:#fff}.login{margin-left:auto;padding-right:25px;color:#bbb}.row{display:flex;min-height:calc(100vh - 105px)}.col-left{width:16.666%;background:#f1f1f1;text-align:center;padding-top:20px}.col-left a{display:block;color:#0879bd;text-decoration:none;margin:14px}.col-main{width:66.666%;padding:25px 30px}.col-main h1{font-size:36px;font-weight:normal;margin:0 0 12px}.col-main h2{font-weight:normal}.col-main p{line-height:1.5}.col-main hr{border:0;border-top:1px solid #ddd;margin:22px 0}.col-right{width:16.666%;background:#f1f1f1;padding:20px 15px}.ads{height:75px;border:1px solid #ccc;background:#fafafa;margin-bottom:15px;display:flex;align-items:center;justify-content:center}.footer{height:50px;background:#555;color:#fff;text-align:center;padding:16px}
+
+/* Responsive cho tablet */
+@media screen and (max-width:900px){
+  .col-left{width:22%}
+  .col-main{width:56%}
+  .col-right{width:22%}
+}
+
+/* Responsive cho điện thoại */
+@media screen and (max-width:600px){
+  .header{height:auto;flex-wrap:wrap}
+  .logo{padding:16px 20px}
+  .menu{order:3;width:100%;flex-direction:column;height:auto}
+  .menu a{text-align:center;padding:12px}
+  .login{padding-right:18px}
+  .row{display:block;min-height:0}
+  .col-left,.col-main,.col-right{width:100%}
+  .col-left{padding:10px}
+  .col-left a{display:inline-block}
+  .col-main{padding:20px}
+  .col-right{padding:15px}
+  .ads{height:55px}
+}
