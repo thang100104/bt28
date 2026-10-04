@@ -1,16 +1,15 @@
-# Thực hành: Tạo trang web hiển thị thời gian hệ thống
+# Thực hành: Tạo trang web để đăng nhập và hiển thị lời chào
 
-Dự án Maven Webapp Java JSP/Servlet tương thích Tomcat 10.1+.
+Dự án Maven Java JSP/Servlet cho Tomcat 10.1+.
 
-## Yêu cầu
-- JDK 17
-- Maven
-- Apache Tomcat 10.1+
+## Tài khoản kiểm thử
+- Username: `admin`
+- Password: `admin`
+
+Đúng tài khoản hiển thị: **Welcome admin to website**. Sai hiển thị: **Login Error**.
 
 ## Chạy
-1. Chạy `mvn clean package`.
-2. Lấy `target/jsp-servlet-demo.war` và deploy vào Tomcat.
-3. Truy cập `http://localhost:8080/jsp-servlet-demo/`.
-4. Servlet: `http://localhost:8080/jsp-servlet-demo/hello`.
-
-Trang JSP hiển thị thời gian hệ thống hiện tại của máy chủ.
+1. Cài JDK 17, Maven và Tomcat 10.1+.
+2. Chạy `mvn clean package`.
+3. Deploy `target/jsp-servlet-login.war` vào Tomcat.
+4. Truy cập `http://localhost:8080/jsp-servlet-login/`.
