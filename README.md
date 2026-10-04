@@ -1,13 +1,15 @@
-# Bài tập: Tạo giao diện giản lược của trang chủ Facebook
+# Bài tập: Tạo layout với RWD
 
 ## Mục tiêu
-Thiết kế fixed header và sidebar.
+Luyện tập sử dụng DIV và CSS để tạo bố cục trang web responsive.
 
 ## Nội dung
-- Fixed header ở trên cùng
-- Sidebar bên trái
-- Phần nội dung chính
-- Sidebar người liên hệ bên phải
-- Responsive cơ bản
+- Header gồm Logo, menu và Login
+- Sidebar trái chứa các Link
+- Nội dung chính gồm Welcome và Test
+- Sidebar phải chứa ADS
+- Footer
+- Responsive cho desktop, tablet và điện thoại
 
-Mở index.html bằng trình duyệt để xem kết quả.
+## Chạy bài
+Mở `index.html` bằng trình duyệt và thay đổi kích thước cửa sổ để kiểm tra Responsive Web Design.
