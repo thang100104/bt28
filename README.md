@@ -1,15 +1,20 @@
-# Bài tập: Tạo layout với RWD
+# Bài tập: Phát triển trang web xem hoạt hình trực tuyến
 
 ## Mục tiêu
-Luyện tập sử dụng DIV và CSS để tạo bố cục trang web responsive.
+- Tạo layout bằng div và CSS.
+- Sử dụng thẻ video.
+- Nhúng YouTube bằng iframe.
 
-## Nội dung
-- Header gồm Logo, menu và Login
-- Sidebar trái chứa các Link
-- Nội dung chính gồm Welcome và Test
-- Sidebar phải chứa ADS
-- Footer
-- Responsive cho desktop, tablet và điện thoại
+## Chức năng
+- Header/logo và ô tìm kiếm.
+- Head-link chứa các liên kết.
+- Left content chứa danh sách video.
+- Right content phát video được chọn.
+- Video đầu tiên được hiển thị mặc định.
+- Có cả iframe YouTube và thẻ HTML5 video.
+- Link bỏ gạch chân, hover đổi màu và in đậm.
+- Header giữ ở phía trên khi cuộn.
+- Responsive cho desktop, tablet và điện thoại.
+- Footer thông tin bản quyền.
 
-## Chạy bài
-Mở `index.html` bằng trình duyệt và thay đổi kích thước cửa sổ để kiểm tra Responsive Web Design.
+Mở index.html bằng trình duyệt để chạy bài.
