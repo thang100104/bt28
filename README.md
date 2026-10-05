@@ -1,18 +1,25 @@
-# Thực hành: Ứng dụng Từ điển đơn giản - Servlet
+# Product Discount Calculator
 
-Ứng dụng Java JSP/Servlet tra cứu từ Anh - Việt.
+Bài tập Web Java JSP/Servlet tính chiết khấu sản phẩm.
 
-## Từ mẫu
-- hello → Xin chào
-- how → Thế nào
-- book → Quyển sách
-- computer → Máy tính
-- student → Sinh viên
+## Chức năng
+- Nhập Product Description
+- Nhập List Price
+- Nhập Discount Percent
+- Tính Discount Amount = List Price * Discount Percent * 0.01
+- Tính Discount Price = List Price - Discount Amount
+- Hiển thị kết quả tại /display-discount
 
-Form gửi từ khóa bằng POST tới `/translate`. Nếu từ có trong Map, Servlet hiển thị nghĩa tiếng Việt; nếu không có sẽ báo không tìm thấy.
+## Công nghệ
+- Java 17
+- Jakarta Servlet 6.0
+- JSP 3.1
+- Maven
+- Tomcat 10.1+
 
-## Chạy
-1. Cài JDK 17, Maven, Tomcat 10.1+.
-2. Chạy `mvn clean package`.
-3. Deploy `target/jsp-servlet-dictionary.war` vào Tomcat.
-4. Mở `http://localhost:8080/jsp-servlet-dictionary/`.
+## Build
+```bash
+mvn clean package
+```
+
+File WAR: `target/product-discount-calculator.war`
