@@ -1,4 +1,26 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Từ điển Anh - Việt</title>
-<style>body{font-family:Arial,sans-serif;display:flex;justify-content:center;margin-top:100px;background:#f8fafc}.dictionary-container{background:white;padding:40px;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,.1);text-align:center;width:350px}input{padding:12px;margin:15px 0;width:90%;border:1px solid #ccc;border-radius:4px;box-sizing:border-box;font-size:16px}button{background:#1b2a7a;color:white;padding:12px 20px;border:0;border-radius:4px;cursor:pointer;width:90%;font-weight:bold;font-size:16px}button:hover{background:#121c54}</style></head>
-<body><div class="dictionary-container"><h2 style="color:#1b2a7a">Từ Điển Anh - Việt</h2><form action="translate" method="POST"><input type="text" name="word" placeholder="Nhập từ tiếng Anh..." required autofocus><button type="submit">Tìm kiếm</button></form></div></body></html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Discount Calculator</title>
+</head>
+<body>
+<h1>Product Discount Calculator</h1>
+<form action="display-discount" method="post">
+    <p>
+        <label>Product Description:</label><br>
+        <input type="text" name="productDescription" required>
+    </p>
+    <p>
+        <label>List Price:</label><br>
+        <input type="number" name="listPrice" step="0.01" min="0" required>
+    </p>
+    <p>
+        <label>Discount Percent:</label><br>
+        <input type="number" name="discountPercent" step="0.01" min="0" max="100" required>
+    </p>
+    <button type="submit">Calculate Discount</button>
+</form>
+</body>
+</html>
