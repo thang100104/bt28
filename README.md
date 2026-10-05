@@ -1,25 +1,24 @@
-# Product Discount Calculator
+# Ứng dụng chuyển đổi tiền tệ - JSP
 
-Bài tập Web Java JSP/Servlet tính chiết khấu sản phẩm.
+Bài thực hành chuyển đổi USD sang VNĐ bằng JSP.
 
-## Chức năng
-- Nhập Product Description
-- Nhập List Price
-- Nhập Discount Percent
-- Tính Discount Amount = List Price * Discount Percent * 0.01
-- Tính Discount Price = List Price - Discount Amount
-- Hiển thị kết quả tại /display-discount
-
-## Công nghệ
+## Yêu cầu
 - Java 17
-- Jakarta Servlet 6.0
-- JSP 3.1
 - Maven
 - Tomcat 10.1+
+
+## Chức năng
+- index.jsp: form nhập tỉ giá (rate) và lượng USD (usd), gửi POST tới converter.jsp.
+- converter.jsp: dùng JSP Scriptlet để nhận dữ liệu và tính `VND = USD * Rate`.
+- Kết quả được hiển thị bằng JSP Expression.
 
 ## Build
 ```bash
 mvn clean package
 ```
 
-File WAR: `target/product-discount-calculator.war`
+File WAR được tạo tại:
+`target/jsp-currency-converter.war`
+
+Sau khi deploy Tomcat, truy cập:
+`http://localhost:8080/jsp-currency-converter/`
