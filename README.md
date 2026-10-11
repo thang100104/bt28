@@ -1,24 +1,34 @@
-# Ứng dụng chuyển đổi tiền tệ - JSP
+# Bài tập Ứng dụng Calculator
 
-Bài thực hành chuyển đổi USD sang VNĐ bằng JSP.
-
-## Yêu cầu
-- Java 17
-- Maven
-- Tomcat 10.1+
+Ứng dụng Java Web sử dụng Servlet và JSP để thực hiện 4 phép toán cơ bản: cộng, trừ, nhân, chia.
 
 ## Chức năng
-- index.jsp: form nhập tỉ giá (rate) và lượng USD (usd), gửi POST tới converter.jsp.
-- converter.jsp: dùng JSP Scriptlet để nhận dữ liệu và tính `VND = USD * Rate`.
-- Kết quả được hiển thị bằng JSP Expression.
+- Nhập 2 toán hạng.
+- Chọn phép toán +, -, *, /.
+- Servlet nhận dữ liệu từ form và gọi lớp `Calculator`.
+- Hiển thị kết quả trên JSP.
+- Bắt lỗi chia cho 0 và dữ liệu nhập không hợp lệ.
+
+## Công nghệ
+- Java 17
+- Maven
+- Jakarta Servlet 6
+- JSP
+- Tomcat 10.1+
+
+## Cấu trúc chính
+- `src/main/java/com/codegym/model/Calculator.java`
+- `src/main/java/com/codegym/controller/CalculatorServlet.java`
+- `src/main/webapp/index.jsp`
+- `src/main/webapp/result.jsp`
 
 ## Build
 ```bash
 mvn clean package
 ```
 
-File WAR được tạo tại:
-`target/jsp-currency-converter.war`
+File WAR:
+`target/servlet-calculator.war`
 
-Sau khi deploy Tomcat, truy cập:
-`http://localhost:8080/jsp-currency-converter/`
+Sau khi deploy lên Tomcat, truy cập:
+`http://localhost:8080/servlet-calculator/`
