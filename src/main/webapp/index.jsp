@@ -1,30 +1,36 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Chuyển đổi tiền tệ</title>
+    <meta charset="UTF-8">
+    <title>Ứng dụng Calculator</title>
     <style>
-        body { font-family: Arial, sans-serif; display: flex; justify-content: center; margin-top: 100px; background-color: #f8fafc; }
-        .converter-container { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; width: 350px; }
-        input { padding: 10px; margin: 10px 0; width: 90%; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        button { background-color: #1b2a7a; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; width: 90%; font-weight: bold; margin-top: 15px; }
-        button:hover { background-color: #121c54; }
+        body { font-family: Arial, sans-serif; background: #f4f6f8; margin: 0; }
+        .box { width: 420px; margin: 80px auto; background: #fff; padding: 28px; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,.12); }
+        h2 { text-align: center; }
+        input, select, button { width: 100%; padding: 11px; margin: 8px 0; box-sizing: border-box; }
+        button { background: #1677ff; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
     </style>
 </head>
 <body>
-<div class="converter-container">
-    <h2 style="color: #1b2a7a;">USD to VND Converter</h2>
-    <form action="converter.jsp" method="POST">
-        <div style="text-align: left; margin-left: 5%;">
-            <label style="font-weight: bold; color: #333;">Tỉ giá (VND/USD):</label>
-        </div>
-        <input type="number" name="rate" placeholder="Ví dụ: 25000" value="25000" required step="any"/>
-        <div style="text-align: left; margin-left: 5%; margin-top: 10px;">
-            <label style="font-weight: bold; color: #333;">Lượng USD cần đổi:</label>
-        </div>
-        <input type="number" name="usd" placeholder="Nhập số lượng USD" required step="any"/>
-        <button type="submit">Tính toán</button>
+<div class="box">
+    <h2>Máy tính đơn giản</h2>
+    <form action="${pageContext.request.contextPath}/calculate" method="post">
+        <label>Toán hạng thứ nhất</label>
+        <input type="number" step="any" name="firstOperand" required>
+
+        <label>Phép toán</label>
+        <select name="operator">
+            <option value="+">Cộng (+)</option>
+            <option value="-">Trừ (-)</option>
+            <option value="*">Nhân (*)</option>
+            <option value="/">Chia (/)</option>
+        </select>
+
+        <label>Toán hạng thứ hai</label>
+        <input type="number" step="any" name="secondOperand" required>
+
+        <button type="submit">Tính kết quả</button>
     </form>
 </div>
 </body>
